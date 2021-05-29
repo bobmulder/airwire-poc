@@ -12,13 +12,30 @@ const mix = require('laravel-mix');
  */
 
 mix.webpackConfig({
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                loader: "ts-loader",
+                options: { appendTsSuffixTo: [/\.vue$/] },
+                exclude: /node_modules/
+            }
+        ]
+    },
+    resolve: {
+        extensions: ["*", ".js", ".jsx", ".vue", ".ts", ".tsx"],
+        alias: {
+            '@': __dirname + '/resources/js',
+            'core': __dirname + '/resources/js'
+        },
+    },
     plugins: [
         new (require('./vendor/archtechx/airwire/resources/js/AirwireWatcher'))(require('chokidar')),
     ],
 })
 
 mix
-    .ts('resources/js/app.ts', 'public/js')
+    .ts('resources/js/app.ts', 'public/js').vue({ version: 3 })
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),

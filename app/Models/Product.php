@@ -42,7 +42,7 @@ class Product extends Model
         return $this->price;
     }
 
-    public function getVisible(): bool
+    public function getVisibility(): bool
     {
         return $this->visible;
     }

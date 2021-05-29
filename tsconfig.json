@@ -8,6 +8,10 @@
         "sourceMap": true,
         "skipLibCheck": true
     },
+    "baseUrl": ".",
+    "paths": {
+        "@/*": ["*"]
+    },
     "include": ["resources/js/**/*"],
     "exclude": [
         "node_modules",
