@@ -1,6 +1,10 @@
 <template>
     <div>
-        Update Product
+        Update Product!
+
+        <input type="text" v-model="component.deferred.name">
+
+        <button @click="component.submit()">Opslaan</button>
     </div>
 </template>
 
@@ -20,18 +24,14 @@ export default defineComponent({
             default: null
         }
     },
-    setup(props: Props, context) {
 
-        const component = Airwire.component('update-product', {}, reactive);
-
-        onMounted(() => {
-            console.log(props.id)
-        })
-
+    data() {
         return {
-            component
+            component: this.$airwire.component('update-product', {
+                name: 'Report ...',
+            }),
         }
+    },
 
-    }
 })
 </script>
