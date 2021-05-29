@@ -4,8 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3bfb84f4e5962ef1a204a719b0a9fc73",
+    "content-hash": "f240f4f1e4de612abf15aaafee72f005",
     "packages": [
+        {
+            "name": "archtechx/airwire",
+            "version": "v0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/archtechx/airwire.git",
+                "reference": "20f888189753abcfb4488cdb9487c9c2415b4ec5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/archtechx/airwire/zipball/20f888189753abcfb4488cdb9487c9c2415b4ec5",
+                "reference": "20f888189753abcfb4488cdb9487c9c2415b4ec5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^8.42",
+                "illuminate/support": "^8.42"
+            },
+            "require-dev": {
+                "illuminate/testing": "^8.42",
+                "orchestra/testbench": "^6.17",
+                "pestphp/pest": "^1.2",
+                "pestphp/pest-plugin-laravel": "^1.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Airwire\\AirwireServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Airwire\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Štancl",
+                    "email": "samuel@archte.ch"
+                }
+            ],
+            "description": "A lightweight full-stack component layer that doesn't dictate your front-end framework",
+            "support": {
+                "issues": "https://github.com/archtechx/airwire/issues",
+                "source": "https://github.com/archtechx/airwire/tree/v0.1.4"
+            },
+            "time": "2021-05-22T13:51:29+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.3",
